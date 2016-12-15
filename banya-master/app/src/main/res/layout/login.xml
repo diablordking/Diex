@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+    android:layout_marginTop="150dp">
+
+
+    <EditText
+
+        android:id="@+id/editTextUserNameToLogin"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:hint="User Name"
+
+        android:ems="10"
+        style="@android:style/Widget.AutoCompleteTextView"
+        android:singleLine="false"
+        android:textColor="#000">
+
+        <requestFocus />
+
+    </EditText>
+
+    <EditText
+
+        android:id="@+id/editTextPasswordToLogin"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:ems="10"
+
+        android:inputType="textPassword"
+
+        android:hint="Password"
+        android:textColor="#000" />
+
+    <Button
+
+        android:id="@+id/buttonSignIn"
+
+        android:layout_width="fill_parent"
+
+        android:layout_height="wrap_content"
+
+        android:text="Sign In" />
+
+
+</LinearLayout>

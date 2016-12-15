@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    android:gravity="center_vertical"
+    android:weightSum="1"
+    android:background="#00BFFF">
+
+
+    <TextView
+        android:text="Diex"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textSize="50sp"
+        android:textColor="#000"
+        android:fontFamily="cursive"
+        android:textStyle="normal|bold"
+        android:paddingLeft="140dp"
+        android:layout_weight="0.11" />
+
+    <Button
+
+        android:id="@+id/buttonSignIN"
+
+        android:layout_height="wrap_content"
+
+        android:text="Sign In"
+
+        android:onClick="signIn"
+        android:layout_marginLeft="50dp"
+        android:textColor="#000"
+        android:layout_width="280dp" />
+
+
+    <Button
+
+        android:id="@+id/buttonSignUP"
+
+        android:layout_height="wrap_content"
+
+        android:text="Sign Up"
+        android:layout_marginLeft="50dp"
+        android:textColor="#000"
+        android:layout_width="280dp" />
+
+
+
+</LinearLayout>
