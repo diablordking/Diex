@@ -110,7 +110,7 @@ public class MainActivity extends BaseActivity implements IgetTop250View{
 
             }
         });
-
+/**
         viewpager.setAdapter(new FragmentPagerAdapter(
                 getSupportFragmentManager()) {
             @Override
@@ -130,6 +130,7 @@ public class MainActivity extends BaseActivity implements IgetTop250View{
             }
 
         });
+ **/
     }
 
 
@@ -191,7 +192,7 @@ public class MainActivity extends BaseActivity implements IgetTop250View{
         //String avatarUrl="http://b.hiphotos.baidu.com/image/pic/item/0823dd54564e925838c205c89982d158ccbf4e26.jpg";
         //DisplayImgUtis.getInstance().display(MainActivity.this,R.drawable.ic_avtar,sdvHeader);
         sdvHeader.setImageResource(R.drawable.ic_avtar);
-        idNavigationview.inflateMenu(R.menu.menu_nav);
+       idNavigationview.inflateMenu(R.menu.menu_nav);
         idNavigationview.setItemIconTintList(ThemeUtils.getNaviItemIconTinkList());
         // 自己写的方法，设置NavigationView中menu的item被选中后要执行的操作
         onNavgationViewMenuItemSelected(idNavigationview);

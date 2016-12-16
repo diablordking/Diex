@@ -9,33 +9,33 @@
     <item
         android:id="@+id/nav_menu_home"
         android:icon="@drawable/ic_extension_white_24dp"
-        android:title="主页"/>
+        android:title="Diet Program"/>
 
     <item android:id="@+id/nav_menu_recommend"
       android:icon="@drawable/ic_explore_white_24dp"
-      android:title="推荐"
+      android:title="Body Mass Index Chart"
       ></item>
 
     <item android:id="@+id/nav_menu_theme"
       android:icon="@drawable/ic_build_white_24dp"
-      android:title="主题"
+      android:title="Theme"
       ></item>
 
 
     <item
         android:id="@+id/nav_menu_feedback"
         android:icon="@drawable/ic_more_horiz_white_24dp"
-        android:title="反馈"/>
+        android:title="Food"/>
     <item
         android:id="@+id/nav_menu_setting"
         android:icon="@drawable/ic_settings_white_24dp"
-        android:title="设置"/>
+        android:title="Diet News"/>
 
     <item
 
         android:id="@+id/nav_menu_categories"
         android:icon="@drawable/ic_star_white_24dp"
-        android:title="关于"/>
+        android:title="Help"/>
 
   </group>
 </menu>
