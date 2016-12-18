@@ -22,12 +22,10 @@
         </activity>
         <activity android:name=".viewimpl.SignUPActivity"/>
         <activity android:name=".viewimpl.MainActivity"/>
-        <activity android:name=".viewimpl.filmdetail.FilmDetailActivity"/>
+
 
         <activity android:name=".viewimpl.webview.WebviewActivity"/>
 
-        <activity android:name=".viewimpl.music.MusicDetailActivity"/>
-        <activity android:name=".viewimpl.book.BookDetailActivity"/>
 
         <activity android:name=".viewimpl.other.HomepageActivity"/>
         <activity android:name=".viewimpl.other.AboutActivity"/>

@@ -27,20 +27,17 @@ import com.forezp.banya.base.ActivityCollector;
 import com.forezp.banya.base.BaseActivity;
 import com.forezp.banya.base.EasyRecyclerViewAdapter;
 import com.forezp.banya.bean.home.ThemeColor;
-import com.forezp.banya.bean.top250.Root;
 import com.forezp.banya.utils.ThemeUtils;
-import com.forezp.banya.viewimpl.book.BookFragment;
-import com.forezp.banya.viewimpl.film.FilmFragment;
-import com.forezp.banya.viewimpl.music.MusicFragment;
+
 import com.forezp.banya.viewimpl.other.AboutActivity;
 import com.forezp.banya.viewimpl.other.HomepageActivity;
 import com.forezp.banya.viewimpl.other.RecommedActivity;
-import com.forezp.banya.viewinterface.film.IgetTop250View;
+
 import com.jaeger.library.StatusBarUtil;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import com.forezp.banya.adapter.CustomPagerAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -51,7 +48,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * 注意：douban API 有次数限制
  *
  */
-public class MainActivity extends BaseActivity implements IgetTop250View{
+public class MainActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -67,9 +64,7 @@ public class MainActivity extends BaseActivity implements IgetTop250View{
     DrawerLayout drawerlayoutHome;
     @BindView(R.id.radiogroup)
     RadioGroup radioGroup;
-    private FilmFragment filmFragment;
-    private BookFragment bookFragment;
-    private MusicFragment musicFragment;
+
     private List<Fragment> listFragment;
     private int currentFragment;
     @Override
@@ -80,37 +75,37 @@ public class MainActivity extends BaseActivity implements IgetTop250View{
        // applyKitKatTranslucency();
         StatusBarUtil.setColorNoTranslucentForDrawerLayout(MainActivity.this,drawerlayoutHome, ThemeUtils.getThemeColor());
        // StatusBarUtil.setColor(MainActivity.this, ThemeUtils.getThemeColor());
+
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.setAdapter(new CustomPagerAdapter(this));
         initView();
-        initViewpagerAndFragment();
-        initListener();
+      //  initViewpagerAndFragment();
+     // initListener();
         initChangeTheme();
     }
+    /**
     private void initListener(){
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
 
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
+            switch (checkedId) {
+                case R.id.rb_home:
+                    currentFragment = 0;
+                    break;
+                case R.id.rb_dynamic:
 
-                switch (checkedId) {
-                    case R.id.rb_home:
-                        currentFragment = 0;
-                        break;
-                    case R.id.rb_dynamic:
+                    currentFragment = 1;
 
-                        currentFragment = 1;
-
-                        break;
-                    case R.id.rb_message:
-                        currentFragment=2;
-                        break;
-
-                }
-
-                viewpager.setCurrentItem(currentFragment, false);
+                    break;
+                case R.id.rb_message:
+                    currentFragment=2;
+                    break;
 
             }
+
+            viewpager.setCurrentItem(currentFragment, false);
+
         });
-/**
+
         viewpager.setAdapter(new FragmentPagerAdapter(
                 getSupportFragmentManager()) {
             @Override
@@ -130,27 +125,22 @@ public class MainActivity extends BaseActivity implements IgetTop250View{
             }
 
         });
- **/
     }
 
-
+**/
 
 
 
     private void initViewpagerAndFragment(){
-        filmFragment=FilmFragment.newInstance();
-        bookFragment=BookFragment.newInstance();
-        musicFragment=MusicFragment.newInstance();
+       // FilmFragment filmFragment = FilmFragment.newInstance();
         listFragment=new ArrayList<>();
-        listFragment.add(filmFragment);
-        listFragment.add(bookFragment);
-        listFragment.add(musicFragment);
+      //  listFragment.add(filmFragment);
         viewpager.setOffscreenPageLimit(3);
-        viewpager.setOnPageChangeListener(onPageChangeListener);
+       // viewpager.setOnPageChangeListener(onPageChangeListener);
 
     }
 
-    private ViewPager.OnPageChangeListener onPageChangeListener = new ViewPager.OnPageChangeListener() {
+ /**   private ViewPager.OnPageChangeListener onPageChangeListener = new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         }
@@ -172,7 +162,7 @@ public class MainActivity extends BaseActivity implements IgetTop250View{
         public void onPageScrollStateChanged(int state) {
         }
     };
-
+**/
     private  void initView(){
         // setSupportActionBar(toolbar);
 
@@ -194,13 +184,13 @@ public class MainActivity extends BaseActivity implements IgetTop250View{
         sdvHeader.setImageResource(R.drawable.ic_avtar);
        idNavigationview.inflateMenu(R.menu.menu_nav);
         idNavigationview.setItemIconTintList(ThemeUtils.getNaviItemIconTinkList());
-        // 自己写的方法，设置NavigationView中menu的item被选中后要执行的操作
+
         onNavgationViewMenuItemSelected(idNavigationview);
     }
 
 
     /**
-     * 设置NavigationView中menu的item被选中后要执行的操作
+
      *
      * @param mNav
      */
@@ -235,9 +225,9 @@ public class MainActivity extends BaseActivity implements IgetTop250View{
                         recyclerView.setLayoutManager(new GridLayoutManager(MainActivity.this, 4));
                         recyclerView.setAdapter(themeColorAdapter);
                         android.support.v7.app.AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                        builder.setTitle("主题选择")
+                        builder.setTitle("Choose The Color")
                                 .setView(view)
-                                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                                .setPositiveButton("Change", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         ThemeUtils.setThemeColor( getResources().getColor(themeColorList.get(themeColorAdapter.getPosition()).getColor()));// 不要变换位置
@@ -301,13 +291,10 @@ public class MainActivity extends BaseActivity implements IgetTop250View{
         return null;
     }
 
-    @Override
-    public void getTop250Success(Root root, boolean isLoadMore) {
-
-    }
 
 
-    @Override
+
+
     public void getDataFail() {
 
     }

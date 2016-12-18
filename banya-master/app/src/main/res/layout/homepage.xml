@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="wrap_content"
+android:layout_height="match_parent"
+android:background="#f83d8fb7"
+    android:layout_marginTop="50dp">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="#fff"
+            android:elevation="8dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/news_title"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:text="Lorem Ipsum Dolor Amet, Consectetur Adipiscing Elit Ipsum Dolor Amet"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/news_description"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_title"
+                android:layout_marginTop="10dp"
+                android:text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form..."
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/news_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_description"
+                android:layout_marginTop="10dp"
+                android:text="30 min ago"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/news_title"
+                android:scaleType="centerCrop"
+                android:src="@drawable/splash9" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="#fff"
+            android:elevation="8dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/news_title1"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:text="Contrary to popular belief, Lorem Ipsum is not simply random text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/news_description1"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_title1"
+                android:layout_marginTop="10dp"
+                android:text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form..."
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/news_time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_description1"
+                android:layout_marginTop="10dp"
+                android:text="50 min ago"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/news_title1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_screen_default" />
+
+        </RelativeLayout> <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="#fff"
+        android:elevation="8dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/news_title2"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum Dolor Amet, Consectetur Adipiscing Elit Ipsum Dolor Amet"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/news_description2"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_title2"
+            android:layout_marginTop="10dp"
+            android:text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form..."
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/news_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_description2"
+            android:layout_marginTop="10dp"
+            android:text="1 day ago"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/news_title2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/splash9" />
+
+    </RelativeLayout> <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="#fff"
+        android:elevation="8dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/news_title3"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Contrary to popular belief, Lorem Ipsum is not simply random text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/news_description3"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_title3"
+            android:layout_marginTop="10dp"
+            android:text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form..."
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/news_time3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_description3"
+            android:layout_marginTop="10dp"
+            android:text="3 day ago"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/news_title3"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_screen_default" />
+
+    </RelativeLayout> <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="#fff"
+        android:elevation="8dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/news_title4"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum Dolor Amet, Consectetur Adipiscing Elit Ipsum Dolor Amet"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/news_description4"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_title4"
+            android:layout_marginTop="10dp"
+            android:text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form..."
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/news_time4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_description4"
+            android:layout_marginTop="10dp"
+            android:text="5 day ago"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/news_title4"
+            android:scaleType="centerCrop"
+            android:src="@drawable/splash9" />
+
+    </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
+</LinearLayout>
