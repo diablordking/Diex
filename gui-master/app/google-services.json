@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "257648584077",
+    "firebase_url": "https://diet-master.firebaseio.com",
+    "project_id": "diet-master",
+    "storage_bucket": "diet-master.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257648584077:android:dffd7d349738d252",
+        "android_client_info": {
+          "package_name": "com.forezp.banya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257648584077-krldmdh3aqkpbit5og30ad866nv7iu26.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.forezp.banya",
+            "certificate_hash": "F654C75B25847720D8C30F8466966793F8D1EC11"
+          }
+        },
+        {
+          "client_id": "257648584077-kk1in9vsgigta43mv068eq915ti4rq74.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoUITvyy4lm6HoPklV0uXqUP-J5yB1DWI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257648584077-kk1in9vsgigta43mv068eq915ti4rq74.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Diex</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+
+    <string name="author_desc">Diet Program for the People</string>
+
+    <string name="email">*Email:diablordking@gmail.com</string>
+    <string name="github">*Github:https://github.com/diablordkinh</string>
+    <string name="blog">*Blog:#</string>
+    <string name="about">
+      I gottaca bitch
+    </string>
+
+     <string name="loading">
+      I gottaca bitch
+    </string>
+    <string name="hlym">
+lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam empor invidunt ut lab ore sit et dolore magna. *</string>
+</resources>
