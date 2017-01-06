@@ -5,10 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:weightSum="1"
-
-    android:background="#00BFFF"
     android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/diet_photo">
 
 
     <LinearLayout
@@ -54,13 +53,11 @@
         <Button
 
             android:id="@+id/buttonSignIn"
-
-            android:layout_width="match_parent"
-
             android:layout_height="wrap_content"
-
+            android:layout_width="280dp"
             android:text="Sign In"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:layout_marginLeft="50dp" />
 
     </LinearLayout>
 
