@@ -10,52 +10,41 @@
 
     android:gravity="center_vertical"
     android:weightSum="1"
-    android:background="#00BFFF">
+    android:background="@drawable/diet_photo">
 
 
-    <TextView
-        android:text="Diex"
-        android:layout_width="371dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textSize="50sp"
-        android:textColor="#000"
-        android:fontFamily="cursive"
-        android:textStyle="normal|bold"
-        android:paddingLeft="140dp"
-        android:layout_weight="0.11" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical" >
 
-    <Button
+        <Button
 
-        android:id="@+id/buttonSignIN"
-
-        android:layout_height="wrap_content"
-
-        android:text="Sign In"
-
-        android:onClick="signIn"
-        android:layout_marginLeft="50dp"
-        android:textColor="#000"
-        android:layout_width="280dp" />
+              android:id="@+id/buttonSignIN"
+              android:layout_height="wrap_content"
+              android:text="Sign In"
+              android:onClick="signIn"
+              android:textColor="#000"
+              android:layout_width="280dp" />
 
 
-    <Button
+        <Button
 
-        android:id="@+id/buttonSignUP"
+            android:id="@+id/buttonSignUP"
 
-        android:layout_height="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:text="Sign Up"
-        android:layout_marginLeft="50dp"
-        android:textColor="#000"
-        android:layout_width="280dp" />
+            android:text="Sign Up"
+            android:textColor="#000"
+            android:layout_width="280dp" />
 
-    <com.google.android.gms.common.SignInButton
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/googleBtn"
-        android:layout_marginLeft="50dp"></com.google.android.gms.common.SignInButton>
+        <com.google.android.gms.common.SignInButton
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/googleBtn"
+            android:layout_marginBottom="20dp"></com.google.android.gms.common.SignInButton>
 
-
-
+    </LinearLayout>
 </LinearLayout>
