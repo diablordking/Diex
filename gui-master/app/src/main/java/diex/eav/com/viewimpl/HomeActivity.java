@@ -1,6 +1,9 @@
 package diex.eav.com.viewimpl;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
@@ -28,6 +31,13 @@ public class HomeActivity extends FragmentActivity
     private FirebaseAuth.AuthStateListener mAuthListener;
    static String resultt;
     public static final int RC_SIGN_IN = 1;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String Name = "nameKey";
+    public static final String Phone = "phoneKey";
+    public static final String Email = "emailKey";
+    SharedPreferences sharedpreferences;
+
+
 
   //   TextView txtName, txtEmail;
 
@@ -126,10 +136,16 @@ public  static String  getprofile(){
 
 // fetch the Password form database for respective user name
                 String storedPassword=loginDataBaseAdapter.getSinlgeEntry(userName);
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                SharedPreferences.Editor editor = preferences.edit();
 
 // check if the Stored password matches with Password entered by user
                 if(password.equals(storedPassword))
                 {
+
+
+                    editor.putString("myString",userName );
+                    editor.commit();
                     Toast.makeText(HomeActivity.this, "Congrats: Login Successfull", Toast.LENGTH_LONG).show();
                     Intent main=new Intent(HomeActivity.this,MainActivity.class);
                     startActivity(main);
@@ -165,9 +181,7 @@ public  static String  getprofile(){
                 firebaseAuthWithGoogle(account);
               //  handleSignInResult(result);
                 resultt=account.getDisplayName();
-                Log.d(TAG,account.getDisplayName()+"anan anan anan anananananananannananananananananananan");
-                Log.e(TAG,account.getDisplayName()+"anan anan anan anananananananannananananananananananan");
-                Log.i(TAG,account.getDisplayName()+"anan anan anan anananananananannananananananananananan");
+
             } else {
                 // Google Sign In failed, update UI appropriately
                 // ...

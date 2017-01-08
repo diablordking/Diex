@@ -26,10 +26,11 @@
         </activity>
         <activity android:name="diex.eav.com.viewimpl.SignUPActivity" />
         <activity android:name="diex.eav.com.viewimpl.MainActivity" />
+        <activity android:name="diex.eav.com.viewimpl.other.Food" />
         <activity android:name="diex.eav.com.viewimpl.webview.WebviewActivity" />
         <activity android:name="diex.eav.com.viewimpl.other.HomepageActivity" />
         <activity android:name="diex.eav.com.viewimpl.other.AboutActivity" />
-        <activity android:name="diex.eav.com.viewimpl.other.RecommedActivity" />
+        <activity android:name="diex.eav.com.viewimpl.other.BodyIndex" />
         <activity android:name="diex.eav.com.viewimpl.other.News"></activity>
     </application>
 

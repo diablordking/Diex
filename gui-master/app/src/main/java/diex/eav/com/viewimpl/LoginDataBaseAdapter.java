@@ -33,6 +33,7 @@ public class LoginDataBaseAdapter
         db = dbHelper.getWritableDatabase();
         return this;
     }
+
     public void close()
     {
         db.close();

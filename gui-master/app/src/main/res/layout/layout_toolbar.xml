@@ -15,8 +15,7 @@
         app:layout_scrollFlags="enterAlways"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:title=" "
-        >
+        app:title="Diex">
         <TextView
             android:id="@+id/tv_title"
             android:textSize="17sp"

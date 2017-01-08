@@ -13,6 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp">
+
+
         <android.support.v7.widget.Toolbar
 
 
@@ -23,45 +25,7 @@
             app:layout_scrollFlags="scroll|enterAlways"
 
             app:title=" "
-            >
-            <RadioGroup
-                android:layout_gravity="center"
-                android:gravity="center_horizontal"
-                android:id="@+id/radiogroup"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:singleLine="true"
-                    android:background="@null"
-                    android:button="@null"
-                    android:checked="true"
-                    android:id="@+id/rb_home"
-                    android:drawableTop="@drawable/tab_home_selector"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:contentDescription="@string/hlym"
-                    android:fontFamily="sans-serif-medium" />
-                <RadioButton
-                    android:singleLine="true"
-                    android:background="@null"
-                    android:button="@null"
-                    android:drawableTop="@drawable/tab_dynamic_selector"
-                    android:id="@+id/rb_dynamic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <RadioButton
-                    android:singleLine="true"
-                    android:background="@null"
-                    android:button="@null"
-                    android:id="@+id/rb_message"
-                    android:drawableTop="@drawable/tab_message_selector"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp" />
-
-            </RadioGroup>
-            </android.support.v7.widget.Toolbar>
+            ></android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout
 >

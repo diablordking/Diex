@@ -3,7 +3,9 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:fitsSystemWindows="true"
     android:clipToPadding="false"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:contextClickable="true"
+    android:onClick="deneme">
 
 
     <include layout="@layout/layout_toolbar"/>
@@ -11,7 +13,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:scrollbars="none"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:longClickable="true"
+        android:onClick="deneme">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"

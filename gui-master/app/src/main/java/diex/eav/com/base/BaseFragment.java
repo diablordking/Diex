@@ -83,12 +83,12 @@ public abstract  class BaseFragment extends Fragment implements IBaseView{
         Intent _Intent = new Intent();
         _Intent.setClass(getActivity(), pClass);
         startActivity(_Intent);
-        getActivity().overridePendingTransition(R.anim.trans_next_in, R.anim.trans_next_out);
+
     }
 
     protected void startThActivityByIntent(Intent pIntent){
         startActivity(pIntent);
-        getActivity().overridePendingTransition(R.anim.trans_next_in, R.anim.trans_next_out);
+
     }
 
 }

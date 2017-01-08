@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
  */
 public  abstract  class BaseFragmentActivity extends AppCompatActivity {
 
-    protected String actName;//用于友盟页面统计
+    protected String actName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

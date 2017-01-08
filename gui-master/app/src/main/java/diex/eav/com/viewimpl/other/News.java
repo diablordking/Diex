@@ -27,9 +27,11 @@ public class News extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-      ButterKnife.bind(this);
+
+        ButterKnife.bind(this);
   //     applyKitKatTranslucency(getResources().getColor(R.color.black));
         initView();
+        toolbar.setTitle("News");
     }
 
     private void initView() {

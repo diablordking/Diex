@@ -22,10 +22,10 @@ public class AboutActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_help);
         ButterKnife.bind(this);
         applyKitKatTranslucency();
-        toolbar.setTitle("About");
+        toolbar.setTitle("Help");
         toolbar.setBackgroundColor(ThemeUtils.getToolBarColor());
         toolbar.setNavigationIcon(R.drawable.back);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

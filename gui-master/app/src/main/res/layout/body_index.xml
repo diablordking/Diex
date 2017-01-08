@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:background="@drawable/bmi_background">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingTop="40dp"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:text="BMI"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textSize="50sp"
+            android:typeface="serif" />
+
+        <!-- Textview for calculator text -->
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Calculator"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <!-- Textview for WEIGHT(KG) text -->
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="30dp"
+            android:text="WEIGHT (KG)"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <!-- Edit text for entering weight with hint in kgs -->
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="IN KGs"
+            android:ems="10"
+            android:fadingEdgeLength="10dp"
+            android:inputType="numberDecimal"
+            android:textAlignment="center" >
+            <requestFocus />
+        </EditText>
+
+        <!-- Text view for HEIGHT(CM)text -->
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="30dp"
+            android:text="HEIGHT (CM)"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <!-- Edit text for entering height with hint in cm -->
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="IN CMs"
+            android:ems="10"
+            android:inputType="numberDecimal" >
+        </EditText>
+
+        <!-- Button for calculating the formula, when pressed, with calculate written over it -->
+        <Button
+            android:id="@+id/ib1"
+            android:layout_width="158dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fadingEdge="vertical"
+            android:background="@color/text_gray_9"
+            android:text="Calculate"
+            android:visibility="visible" />
+
+        <!-- Text view for showing result -->
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="20dp"
+            android:text=""
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_orange_dark"/>
+    </LinearLayout>
+
+</LinearLayout>

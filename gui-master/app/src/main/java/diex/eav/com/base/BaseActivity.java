@@ -29,28 +29,19 @@ public   abstract class BaseActivity extends  BaseFragmentActivity  implements I
 
 
     /**
-     * 弹出toast 显示时长short
-     * @param pMsg
-     */
-  //  protected void toast(String pMsg) {
-     //   T.show(this, pMsg, Toast.LENGTH_SHORT);
- //   }
 
-
-    /**
-     * 根据传入的类(class)打开指定的activity
      * @param pClass
      */
     protected void startThActivity(Class<?> pClass) {
         Intent _Intent = new Intent();
         _Intent.setClass(this, pClass);
         startActivity(_Intent);
-        overridePendingTransition(R.anim.trans_next_in, R.anim.trans_next_out);
+
     }
 
     protected void startThActivityByIntent(Intent pIntent){
         startActivity(pIntent);
-        overridePendingTransition(R.anim.trans_next_in, R.anim.trans_next_out);
+
     }
 
 
@@ -89,12 +80,9 @@ public   abstract class BaseActivity extends  BaseFragmentActivity  implements I
 
     }
 
-    /**
-     * 关闭界面
-     **/
     public void backThActivity() {
         finish();
-        overridePendingTransition(R.anim.trans_pre_in, R.anim.trans_pre_out);
+
     }
 
     protected void applyKitKatTranslucency() {
@@ -105,7 +93,7 @@ public   abstract class BaseActivity extends  BaseFragmentActivity  implements I
             SystemBarTintManager mTintManager = new SystemBarTintManager(this);
             mTintManager.setStatusBarTintEnabled(true);
 
-           // mTintManager.setStatusBarTintResource(R.color.red_base);//通知栏所需颜色
+           // mTintManager.setStatusBarTintResource(R.color.red_base);
             mTintManager.setStatusBarTintColor(ThemeUtils.getThemeColor());
         }
 
@@ -119,7 +107,7 @@ public   abstract class BaseActivity extends  BaseFragmentActivity  implements I
             SystemBarTintManager mTintManager = new SystemBarTintManager(this);
             mTintManager.setStatusBarTintEnabled(true);
 
-            // mTintManager.setStatusBarTintResource(R.color.red_base);//通知栏所需颜色
+            // mTintManager.setStatusBarTintResource(R.color.red_base);
             mTintManager.setStatusBarTintColor(res);
         }
 
@@ -139,23 +127,5 @@ public   abstract class BaseActivity extends  BaseFragmentActivity  implements I
         win.setAttributes(winParams);
     }
 
-//    protected void setStatueBarTranslicent(){
-//        if (Integer.parseInt(android.os.Build.VERSION.SDK) >= 19) {
-//            // // 透明状态栏,透明是要加view.setPadding(0, MFSTool.dip2px(act, 22), 0, 0);
-//            //getWindow().addFlags(
-//            //WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//            //隐藏虚拟键盘,隐藏时需要加view.setPadding(0, 0, 0,MFSTool.dip2px(act, 24));
-//            // getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-//            // view.setPadding(0, MFSTool.dip2px(act, 22), 0, 0);
-//            // }
-//            // if (MFSTool.checkDeviceHasNavigationBar(act))
-//            // {
-//            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//            //透明导航栏
-//            //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-//            //view.setPadding(0, 0, 0,
-//            //				MFSTool.dip2px(act, 24));
-//        }
-//    }
 
 }
